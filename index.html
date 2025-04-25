@@ -3,6 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <!--  -->
     <!-- BS Icons -->
     <link
       rel="stylesheet"
@@ -21,7 +29,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Yummy Template.</title>
   </head>
-  <body>
+  <body data-bs-target="#navbar" data-bs-spy="scroll">
     <a href="#" class="scroll-up scrollable">
       <i class="bi bi-arrow-up-short"></i>
     </a>
@@ -260,7 +268,7 @@
     </section>
     <!--End Stats Section  -->
     <!--Start Menu Section  -->
-    <section id="meun" class="menu">
+    <section id="menu" class="menu">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -705,190 +713,129 @@
     </section>
     <!--End Menu Section  -->
     <!--Start TESTIMONIALS Section  -->
-    <section class="testimonials">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="heading scrollable">
-              <p>About Us</p>
-              <h2>What Are They <span>Saying About Us</span></h2>
+    <section class="container-fluid testimonials-container">
+      <div class="testimonials">
+        <div class="col-12 ">
+          <div
+            class="inner d-flex align-items-center justify-content-center gap-4 row">
+            <div class="content d-flex flex-column col-lg-8">
+              <div class="text">
+                <i class="bi bi-quote"></i>
+                Enim nisi quem export duis labore cillum quae magna enim sint
+                quorum nulla quem veniam duis minim tempor labore quem eram duis
+                noster aute amet eram fore quis sint minim.
+                <i class="bi bi-quote reversed"></i>
+              </div>
+              <div class="person">
+                <h3>Saul goodman</h3>
+                <p>CEO&FOUNDER</p>
+                <ul class="d-flex p-0 stars">
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                </ul>
+              </div>
+            </div>
+            <div class="img rounded col-lg-2">
+              <img
+                src="images/testimonials-1.jpg"
+                class="img-fluid rounded-circle"
+                alt="" />
             </div>
           </div>
-          <div class="col-12">
-            <div
-              id="carouselOne"
-              class="carousel slide"
-              data-bs-ride="carousel">
-              <div class="carousel-indicators">
-                <button
-                  type="button"
-                  data-bs-target="#carouselOne"
-                  data-bs-slide-to="0"
-                  class="active"
-                  aria-current="true"
-                  aria-label="Slide 1"></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselOne"
-                  data-bs-slide-to="1"
-                  aria-label="Slide 2"></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselOne"
-                  data-bs-slide-to="2"
-                  aria-label="Slide 3"></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselOne"
-                  data-bs-slide-to="3"
-                  aria-label="Slide 3"></button>
+        </div>
+        <div class="col-12 ">
+          <div
+            class="inner d-flex align-items-center justify-content-center gap-4 row">
+            <div class="content d-flex flex-column col-lg-8">
+              <div class="text">
+                <i class="bi bi-quote"></i>
+                Enim nisi quem export duis labore cillum quae magna enim sint
+                quorum nulla quem veniam duis minim tempor labore quem eram duis
+                noster aute amet eram fore quis sint minim.
+                <i class="bi bi-quote reversed"></i>
               </div>
-              <div class="carousel-inner">
-                <div class="carousel-item draggable active">
-                  <div class="inner row d-flex align-items-center gap-4">
-                    <div class="content d-flex flex-column col-lg-8">
-                      <div class="text">
-                        <i class="bi bi-quote"></i>
-                        Enim nisi quem export duis labore cillum quae magna enim
-                        sint quorum nulla quem veniam duis minim tempor labore
-                        quem eram duis noster aute amet eram fore quis sint
-                        minim.
-                        <i class="bi bi-quote reversed"></i>
-                      </div>
-                      <div class="person">
-                        <h3>Saul goodman</h3>
-                        <p>CEO&FOUNDER</p>
-                        <ul class="d-flex p-0 stars">
-                          <li><i class="bi bi-star-fill"></i></li>
-                          <li><i class="bi bi-star-fill"></i></li>
-                          <li><i class="bi bi-star-fill"></i></li>
-                          <li><i class="bi bi-star-fill"></i></li>
-                          <li><i class="bi bi-star-fill"></i></li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="img rounded col-lg-2">
-                      <img
-                        src="images/testimonials-1.jpg"
-                        class="img-fluid rounded-circle"
-                        alt="" />
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-item draggable">
-                  <div class="inner row d-flex align-items-center gap-4">
-                    <div class="content d-flex flex-column col-lg-8">
-                      <div class="text">
-                        <i class="bi bi-quote"></i>
-                        Enim nisi quem export duis labore cillum quae magna enim
-                        sint quorum nulla quem veniam duis minim tempor labore
-                        quem eram duis noster aute amet eram fore quis sint
-                        minim.
-                        <i class="bi bi-quote reversed"></i>
-                      </div>
-                      <div class="person">
-                        <h3>Sara Wilsson</h3>
-                        <p>Designer</p>
-                        <ul class="d-flex p-0 stars">
-                          <li><i class="bi bi-star-fill"></i></li>
-                          <li><i class="bi bi-star-fill"></i></li>
-                          <li><i class="bi bi-star-fill"></i></li>
-                          <li><i class="bi bi-star-fill"></i></li>
-                          <li><i class="bi bi-star-fill"></i></li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="img rounded col-lg-2">
-                      <img
-                        src="images/testimonials-2.jpg"
-                        class="img-fluid rounded-circle"
-                        alt="" />
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-item draggable">
-                  <div class="inner row d-flex align-items-center gap-4">
-                    <div class="content d-flex flex-column col-lg-8">
-                      <div class="text">
-                        <i class="bi bi-quote"></i>
-                        Enim nisi quem export duis labore cillum quae magna enim
-                        sint quorum nulla quem veniam duis minim tempor labore
-                        quem eram duis noster aute amet eram fore quis sint
-                        minim.
-                        <i class="bi bi-quote reversed"></i>
-                      </div>
-                      <div class="person">
-                        <h3>Jeana Karlis</h3>
-                        <p>Store Owner</p>
-                        <ul class="d-flex p-0 stars">
-                          <li><i class="bi bi-star-fill"></i></li>
-                          <li><i class="bi bi-star-fill"></i></li>
-                          <li><i class="bi bi-star-fill"></i></li>
-                          <li><i class="bi bi-star-fill"></i></li>
-                          <li><i class="bi bi-star-fill"></i></li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="img rounded col-lg-2">
-                      <img
-                        src="images/testimonials-3.jpg"
-                        class="img-fluid rounded-circle"
-                        alt="" />
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-item draggable">
-                  <div class="inner row d-flex align-items-center gap-4">
-                    <div class="content d-flex flex-column col-lg-8">
-                      <div class="text">
-                        <i class="bi bi-quote"></i>
-                        Enim nisi quem export duis labore cillum quae magna enim
-                        sint quorum nulla quem veniam duis minim tempor labore
-                        quem eram duis noster aute amet eram fore quis sint
-                        minim.
-                        <i class="bi bi-quote reversed"></i>
-                      </div>
-                      <div class="person">
-                        <h3>John Larson</h3>
-                        <p>Enterenter</p>
-                        <ul class="d-flex p-0 stars">
-                          <li><i class="bi bi-star-fill"></i></li>
-                          <li><i class="bi bi-star-fill"></i></li>
-                          <li><i class="bi bi-star-fill"></i></li>
-                          <li><i class="bi bi-star-fill"></i></li>
-                          <li><i class="bi bi-star-fill"></i></li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="img rounded col-lg-2">
-                      <img
-                        src="images/testimonials-4.jpg"
-                        class="img-fluid rounded-circle"
-                        alt="" />
-                    </div>
-                  </div>
-                </div>
+              <div class="person">
+                <h3>Sara Wilsson</h3>
+                <p>Designer</p>
+                <ul class="d-flex p-0 stars">
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                </ul>
               </div>
-              <button
-                class="carousel-control-prev"
-                type="button"
-                data-bs-target="#carouselOne"
-                data-bs-slide="prev">
-                <span
-                  class="carousel-control-prev-icon"
-                  aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button
-                class="carousel-control-next"
-                type="button"
-                data-bs-target="#carouselOne"
-                data-bs-slide="next">
-                <span
-                  class="carousel-control-next-icon"
-                  aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
+            </div>
+            <div class="img rounded col-lg-2">
+              <img
+                src="images/testimonials-2.jpg"
+                class="img-fluid rounded-circle"
+                alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="col-12 ">
+          <div
+            class="inner d-flex align-items-center justify-content-center gap-4 row">
+            <div class="content d-flex flex-column col-lg-8">
+              <div class="text">
+                <i class="bi bi-quote"></i>
+                Enim nisi quem export duis labore cillum quae magna enim sint
+                quorum nulla quem veniam duis minim tempor labore quem eram duis
+                noster aute amet eram fore quis sint minim.
+                <i class="bi bi-quote reversed"></i>
+              </div>
+              <div class="person">
+                <h3>Jeana Karlis</h3>
+                <p>Store Owner</p>
+                <ul class="d-flex p-0 stars">
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                </ul>
+              </div>
+            </div>
+            <div class="img rounded col-lg-2">
+              <img
+                src="images/testimonials-3.jpg"
+                class="img-fluid rounded-circle"
+                alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="col-12 ">
+          <div
+            class="inner d-flex align-items-center justify-content-center gap-4 row">
+            <div class="content d-flex flex-column col-lg-8">
+              <div class="text">
+                <i class="bi bi-quote"></i>
+                Enim nisi quem export duis labore cillum quae magna enim sint
+                quorum nulla quem veniam duis minim tempor labore quem eram duis
+                noster aute amet eram fore quis sint minim.
+                <i class="bi bi-quote reversed"></i>
+              </div>
+              <div class="person">
+                <h3>John Larson</h3>
+                <p>Enterenter</p>
+                <ul class="d-flex p-0 stars">
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                </ul>
+              </div>
+            </div>
+            <div class="img rounded col-lg-2">
+              <img
+                src="images/testimonials-4.jpg"
+                class="img-fluid rounded-circle"
+                alt="" />
             </div>
           </div>
         </div>
@@ -896,65 +843,63 @@
     </section>
     <!--End TESTIMONIALS Section  -->
     <!--Start event Section  -->
-    <section class="event">
-      <div class="slider scrollable">
-        <div class="inner-slider">
-          <div class="slider-item">
-            <div class="text">
-              <h2>Custom parties</h2>
-              <h3>$99</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Exercitationem aperiam, quam dicta ullam reiciendis vero!
-              </p>
+    <section class="event" id="events" style="overflow: hidden;">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="slider">
+            <div class="inner-slider">
+              <div class="slider-item">
+                <div class="text">
+                  <h2>Custom parties</h2>
+                  <h3>$99</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Exercitationem aperiam, quam dicta ullam reiciendis vero!
+                  </p>
+                </div>
+                <img src="images/events-1.jpg" alt="" />
+              </div>
+              <div class="slider-item">
+                <div class="text">
+                  <h2>private parties</h2>
+                  <h3>$289</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Exercitationem aperiam, quam dicta ullam reiciendis vero!
+                  </p>
+                </div>
+                <img src="images/events-2.jpg" alt="" />
+              </div>
+              <div class="slider-item">
+                <div class="text">
+                  <h2>birthday parties</h2>
+                  <h3>$499</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Exercitationem aperiam, quam dicta ullam reiciendis vero!
+                  </p>
+                </div>
+                <img src="images/events-3.jpg" alt="" />
+              </div>
+              <div class="slider-item">
+                <div class="text">
+                  <h2>wedding parties</h2>
+                  <h3>$899</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Exercitationem aperiam, quam dicta ullam reiciendis vero!
+                  </p>
+                </div>
+                <img src="images/events-4.jpg" alt="" />
+              </div>
             </div>
-            <img src="images/events-1.jpg" alt="" />
-          </div>
-          <div class="slider-item">
-            <div class="text">
-              <h2>private parties</h2>
-              <h3>$289</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Exercitationem aperiam, quam dicta ullam reiciendis vero!
-              </p>
-            </div>
-            <img src="images/events-2.jpg" alt="" />
-          </div>
-          <div class="slider-item">
-            <div class="text">
-              <h2>birthday parties</h2>
-              <h3>$499</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Exercitationem aperiam, quam dicta ullam reiciendis vero!
-              </p>
-            </div>
-            <img src="images/events-3.jpg" alt="" />
-          </div>
-          <div class="slider-item">
-            <div class="text">
-              <h2>wedding parties</h2>
-              <h3>$899</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Exercitationem aperiam, quam dicta ullam reiciendis vero!
-              </p>
-            </div>
-            <img src="images/events-4.jpg" alt="" />
           </div>
         </div>
-      </div>
-      <div class="slider-indicators">
-        <button class="indicator active"></button>
-        <button class="indicator"></button>
-        <button class="indicator"></button>
-        <button class="indicator"></button>
       </div>
     </section>
     <!--End event Section  -->
     <!--Start Chef Section  -->
-    <section class="chef">
+    <section class="chef" id="chefs">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -1145,7 +1090,7 @@
       </div>
     </section>
     <!--End Booking Section  -->
-    <section class="gallery">
+    <section class="gallery" id="gallery">
       <div class="container">
         <div class="col-12">
           <div class="heading scrollable">
@@ -1170,7 +1115,7 @@
         </div>
       </div>
     </section>
-    <section class="contact">
+    <section class="contact" id="contact">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -1320,16 +1265,22 @@
               </ul>
             </div>
           </div>
-          <hr>
+          <hr />
           <div class="col-12 d-flex flex-column align-items-center text-center">
-           <p class="w-100 fw-bold fs-3"> © Copyright Yummy All Rights Reserved</p>
-           <p>Designed by <a href="#" class="bs-copy">BootstrapMade</a></p>
+            <p class="w-100 fw-bold fs-3">
+              © Copyright Yummy All Rights Reserved
+            </p>
+            <p>Designed by <a href="#" class="bs-copy">BootstrapMade</a></p>
           </div>
-          <hr class="mb-0">
+          <hr class="mb-0" />
         </div>
       </div>
     </footer>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <!--  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!--  -->
     <!-- swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>

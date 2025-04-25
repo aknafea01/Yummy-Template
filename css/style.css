@@ -659,146 +659,139 @@ section {
   color: #fff;
 }
 /******************************************/
-.testimonials {
+.testimonials .content {
+  position: relative;
+  padding: 20px;
+}
+.testimonials .content::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: calc(100% - 40px);
+  background-color: #ce1212;
+}
+
+.slick-dots {
+  position: absolute;
+  left: 50%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transform: translate(-50%, 14px);
+}
+
+.slick-dots button {
+  text-indent: -9999px;
+  border-radius: 50%;
+  width: 13px !important;
+  height: 13px !important;
+}
+.slick-dots button::before {
+  background-color: #ce1212;
+  border-radius: 50%;
+  width: 13px !important;
+  height: 13px !important;
+}
+.testimonials-container {
+  padding: 60px;
   background-color: #f2f2f2;
 }
-.carousel {
-  min-height: 30vh;
-}
-.carousel .inner {
+
+.testimonials .inner {
   width: 85%;
   margin: auto;
   padding-left: 80px;
 }
-.carousel .col-lg-8::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 3px;
-  background-color: var(--accent-color);
+@media (max-width:400px) {
+  .testimonials .inner {
+    width: 100%;
+    padding-left: 0;
+  }
 }
-.carousel .col-lg-8 {
-  position: relative;
-
-  padding: 10px 25px;
-}
-.carousel .text {
+.testimonials .text {
   font-size: 1.4rem;
   line-height: 24px;
   font-style: italic;
   font-weight: 400;
   letter-spacing: 1px;
 }
-.carousel .text i {
+.testimonials .text i {
   color: var(--indian-red);
   font-size: 2.4rem;
   opacity: 0.8;
 }
-.carousel .text i.reversed {
+.testimonials .text i.reversed {
   transform: rotate(180deg);
   display: inline-block;
 }
-.carousel .person {
+.testimonials .person {
   font-family: Amatic SC;
   font-size: 1.6rem;
 }
-.carousel .person h3 {
+.testimonials .person h3 {
   font-size: 2rem;
   color: #000000;
   font-weight: 700;
   margin: 10px 2px;
 }
-.carousel .stars {
+.testimonials .stars {
   color: #f4b860;
 }
-.carousel .carousel-indicators button {
-  background-color: var(--engineering-orange);
-  border-radius: 50%;
-  width: 15px;
-  height: 15px;
-}
+
 /******************************************/
 .event {
   height: 70vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;;
 }
-.slider {
-  height: 100%;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-}
-.slider .inner-slider {
-  display: flex;
-  height: 70vh;
-  position: absolute;
-  pointer-events: none;
-  align-items: center;
-}
-.slider .inner-slider .slider-item {
-  width: 400px;
-  height: 70vh;
-  border: 1px solid #fff;
-  position: relative;
-}
-.slider .inner-slider .slider-item::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  opacity: 0.7;
-}
-.slider .inner-slider .slider-item img {
+
+.inner-slider .slider-item img {
   width: 100%;
   height: 100%;
   position: absolute;
   z-index: -1;
 }
-.slider-indicators {
+.event .inner-slider .slider-item::before {
+  content: '';
   position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
-  z-index: 10;
-}
-
-.slider-indicators .indicator {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: color(srgb 0.807843 0.0705882 0.0705882 / 0.3);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 5;
   opacity: 0.5;
-  border: none;
-  cursor: pointer;
-  transition: opacity 0.3s;
+}
+.event .inner-slider .slider-item {
+  z-index: 100;
+  position: relative;
+  height: 50vh;
+  display: flex;
+  align-items: flex-end;
+  margin: 0;
+}
+.event .inner-slider .slider-item .text {
+  position: absolute;
+  z-index: 200;
+  color: #fff;
 }
 
-.slider-indicators .indicator.active {
-  opacity: 1;
-  background-color: color(srgb 0.807843 0.0705882 0.0705882 / 0.8);
-}
 .event .text {
   position: absolute;
   color: #fff;
-
   left: 0;
   bottom: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   height: 100%;
-  padding: 60px 20px;
+  padding: 25px;
 }
 .event .text h2 {
   font-size: 2.8rem;
