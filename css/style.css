@@ -709,7 +709,7 @@ section {
   margin: auto;
   padding-left: 80px;
 }
-@media (max-width:400px) {
+@media (max-width: 400px) {
   .testimonials .inner {
     width: 100%;
     padding-left: 0;
@@ -748,7 +748,7 @@ section {
 /******************************************/
 .event {
   height: 70vh;
-  width: 100%;;
+  width: 100%;
 }
 
 .inner-slider .slider-item img {
@@ -758,7 +758,7 @@ section {
   z-index: -1;
 }
 .event .inner-slider .slider-item::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -830,6 +830,11 @@ section {
 }
 .chef .inner img {
   border-radius: 10px;
+}
+.chef svg {
+  position: absolute;
+  top: 100%;
+  transform: translateY(-100%);
 }
 .chef .inner:hover {
   scale: 1.04;
