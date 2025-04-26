@@ -971,6 +971,46 @@ section {
 .gallery {
   min-height: 60vh;
 }
+#galler-LightBoxContainer {
+  width: 100vw;
+  position: fixed;
+  height: 100vh;
+  background-color: #000000bd;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  display: none;
+}
+#galler-LightBoxContainer i{
+  font-size: 35px;
+  color: #fff;
+  cursor: pointer;
+  top: 20px;
+  right: 20px;
+
+  transition: 0.5s;
+  background-color: #0000003d;
+}
+#galler-LightBoxContainer i.bi-x {
+  background-color: #00000000;
+}
+#galler-LightBoxContainer i.bi-x:hover {
+  background-color: #00000000;
+}
+#galler-LightBoxContainer i:hover {
+  background-color: #000000;
+}
+#gallery-LightBoxItems {
+  max-width: 610px;
+  max-height: 610px;
+  width: 100%;
+  aspect-ratio: 1;
+  background-position: center;
+  background-size: cover;
+}
 /**********************************************/
 .contact .inner {
   padding: 0 20px;

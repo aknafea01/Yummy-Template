@@ -6,9 +6,17 @@ const lightBoxContainer = document.getElementById("lightBoxContainer");
 const lightBoxItem = document.getElementById("lightBoxItem");
 const TapPanes = document.querySelectorAll(".tab-pane");
 const swipperImages = document.querySelectorAll(".swiper-slide");
-const closeBtn = document.getElementById("close");
+const closeBtns = document.querySelectorAll(".close");
 const nextBtn = document.getElementById("nextImg");
 const prevBtn = document.getElementById("prevImg");
+const gallery = document.getElementById("gallery");
+const gallerLightBoxContainer = document.getElementById(
+  "galler-LightBoxContainer"
+);
+const gallerLightBoxItems = document.getElementById("gallery-LightBoxItems");
+const prevGalleryImg = document.getElementById("prevGalleryImg");
+const nextGalleryImg = document.getElementById("nextGalleryImg");
+
 $(document).ready(function () {
   $(".testimonials").slick({
     dots: true,
@@ -17,9 +25,8 @@ $(document).ready(function () {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000 
+    autoplaySpeed: 2000,
   });
-
 });
 $(document).ready(function () {
   $(".event .slider .inner-slider").slick({
@@ -34,19 +41,18 @@ $(document).ready(function () {
       {
         breakpoint: 992, // tablets
         settings: {
-          slidesToShow: 2
-        }
+          slidesToShow: 2,
+        },
       },
       {
         breakpoint: 768, // mobiles
         settings: {
-          slidesToShow: 1
-        }
-      }
-    ]
+          slidesToShow: 1,
+        },
+      },
+    ],
   });
 });
-
 
 const swiper = new Swiper(".swiper", {
   slidesPerView: 1,
@@ -73,7 +79,6 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-
 let i;
 sections.forEach((section) => {
   i = 0.1;
@@ -82,7 +87,6 @@ sections.forEach((section) => {
     el.style.transitionDelay = `${i}s`;
   });
 });
-// Navbar onscroll styled
 window.onscroll = function () {
   if (window.scrollY > 10) {
     nav.style.boxShadow = "rgba(149, 157, 165, 0.2) 0px 8px 24px";
@@ -147,13 +151,16 @@ TapPanes.forEach((TapPane, parentIdx) => {
     });
   });
 });
-closeBtn.addEventListener("click", closeLightBox);
-function closeLightBox() {
-  lightBoxContainer.style.display = "none";
-  lightBoxItem.style.scale = 0;
-  nav.classList.toggle("hidden", false);
-  document.body.style.overflow = "";
-}
+closeBtns.forEach((closeBtn) => {
+  closeBtn.addEventListener("click", closeLightBox);
+  function closeLightBox() {
+    lightBoxContainer.style.display = "none";
+    lightBoxItem.style.scale = 0;
+    gallerLightBoxContainer.style.display = "none";
+    nav.classList.toggle("hidden", false);
+    document.body.style.overflow = "";
+  }
+});
 nextBtn.addEventListener("click", nextImg);
 prevBtn.addEventListener("click", prevImg);
 function nextImg() {
@@ -176,7 +183,40 @@ function prevImg() {
     TapPanes[ParentIdx].querySelectorAll("img")[currenIndex].src
   }`;
 }
-
+let currenGalleryIndex;
+const galleryImgs = gallery.querySelectorAll("img");
+galleryImgs.forEach((img, idx) => {
+  img.style.cursor = "pointer";
+  img.addEventListener("click", () => {
+    gallerLightBoxContainer.style.display = "flex";
+    gallerLightBoxItems.style.backgroundImage = `url(${img.getAttribute(
+      "src"
+    )})`;
+    document.body.style = "overflow:hidden";
+    nav.classList.toggle("hidden");
+    currenGalleryIndex = idx;
+  });
+});
+prevGalleryImg.addEventListener("click", prevGalImg);
+nextGalleryImg.addEventListener("click", nextGalImg);
+function prevGalImg() {
+  currenGalleryIndex--;
+  if (currenGalleryIndex < 0) {
+    currenGalleryIndex = galleryImgs.length - 1;
+  }
+  gallerLightBoxItems.style.backgroundImage = `url(${galleryImgs[
+    currenGalleryIndex
+  ].getAttribute("src")})`;
+}
+function nextGalImg() {
+  currenGalleryIndex++;
+  if (currenGalleryIndex > galleryImgs.length - 1) {
+    currenGalleryIndex = 0;
+  }
+  gallerLightBoxItems.style.backgroundImage = `url(${galleryImgs[
+    currenGalleryIndex
+  ].getAttribute("src")})`;
+}
 lightBoxItem.addEventListener("dragstart", (e) => {
   const ghostImg = new Image();
   ghostImg.src =
@@ -196,5 +236,3 @@ lightBoxItem.addEventListener("dragend", (e) => {
     prevImg();
   }
 });
-
-/*////////////////////////////*/
